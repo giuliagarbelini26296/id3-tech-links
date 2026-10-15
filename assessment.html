@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#071d30">
+<title>Fast Assessment de Segurança | ID3 TECH</title>
+<meta name="description" content="Avaliação inicial gratuita de segurança e resiliência operacional para pequenas e médias empresas. Leva cerca de 3 minutos.">
+<link rel="icon" type="image/png" href="assets/id3-simbolo.png"><link rel="stylesheet" href="assets/styles.css"></head>
+<body>
+<header class="topbar"><div class="container topbar-inner">
+<a class="brand" href="index.html" aria-label="ID3 TECH - Voltar para a central de links"><img src="assets/id3-simbolo.png" alt=""><span>ID3 <b>TECH</b></span></a>
+<nav class="topnav"><a class="optional-menu" href="index.html">← Central de links</a><a class="pill-link" href="https://wa.me/5511982457213?text=Ol%C3%A1%21%20Quero%20conversar%20sobre%20o%20Fast%20Assessment%20da%20ID3%20TECH." target="_blank" rel="noopener">Falar com especialista ↗</a></nav>
+</div></header>
+<section class="gradient-hero assessment-header"><div class="container">
+<div class="micro">ID3 TECH / Avaliação inicial</div>
+<h1>Sua empresa está preparada para os riscos digitais?</h1>
+<p>Entenda os pontos de atenção da sua operação e veja por onde começar — sem termos técnicos complicados. Uma triagem prática para pequenas e médias empresas.</p>
+<div class="hero-facts"><span>✓ Sem custo</span><span>◷ Cerca de 3 minutos</span><span>▣ 8 perguntas objetivas</span><span>↗ Resultado imediato</span></div>
+</div></section>
+<main class="container assessment-layout">
+<aside class="side-card" aria-label="Etapas"><h2>Seu Fast Assessment</h2>
+<ol class="step-menu"><li id="menu1" class="current"><span class="num">1</span><span>Sua empresa</span></li><li id="menu2"><span class="num">2</span><span>Avaliação</span></li><li id="menu3"><span class="num">3</span><span>Resultado</span></li></ol>
+<p class="small-note">A avaliação é autodeclarada e oferece uma orientação inicial. Não substitui auditoria, análise de vulnerabilidades ou Pentest.</p>
+</aside>
+<div>
+<form id="assessmentForm" class="form-card" novalidate>
+<section class="step active" id="step1" aria-label="Dados da empresa">
+<div class="micro" style="color:#078ab7">Etapa 01 / 03</div><h2>Vamos conhecer sua empresa</h2>
+<p class="form-intro">Somente informações básicas. Nenhum dado é enviado automaticamente ao preencher o formulário.</p>
+<div class="fields">
+<label class="field">Seu nome *<input name="nome" type="text" autocomplete="name" required maxlength="90" placeholder="Como podemos chamar você?"></label>
+<label class="field">E-mail profissional *<input name="email" type="email" autocomplete="email" required maxlength="130" placeholder="seuemail@empresa.com.br"></label>
+<label class="field">Nome da empresa *<input name="empresa" type="text" required maxlength="120" placeholder="Sua empresa"></label>
+<label class="field">Segmento *<select name="setor" required><option value="">Selecione seu segmento</option><option>Varejo</option><option>E-commerce</option><option>Beleza e cosméticos</option><option>Alimentos e bebidas</option><option>Indústria</option><option>Serviços</option><option>Outro</option></select></label>
+<label class="field">Sua função *<select name="cargo" required><option value="">Selecione sua função</option><option>CEO / Sócio / Proprietário</option><option>TI / Tecnologia</option><option>Financeiro / CFO</option><option>Operações / Logística</option><option>Marketing / E-commerce</option><option>Outra</option></select></label>
+<label class="field">Faturamento anual <span class="optional">(opcional)</span><select name="faturamento"><option value="Prefiro não informar">Prefiro não informar</option><option>Até R$ 500 mil</option><option>De R$ 500 mil a R$ 2 milhões</option><option>De R$ 2 a R$ 10 milhões</option><option>De R$ 10 a R$ 30 milhões</option><option>De R$ 30 a R$ 100 milhões</option><option>Acima de R$ 100 milhões</option></select></label>
+<label class="field">Tamanho da equipe <span class="optional">(opcional)</span><select name="colaboradores"><option value="Prefiro não informar">Prefiro não informar</option><option>1 a 10 pessoas</option><option>11 a 50 pessoas</option><option>51 a 200 pessoas</option><option>201 a 500 pessoas</option><option>Mais de 500 pessoas</option></select></label>
+</div>
+<p class="under-input">O faturamento é opcional e serve apenas para contextualizar o porte do negócio. <strong>Esses valores não são preços dos serviços da ID3 TECH.</strong></p>
+<div class="step-actions"><a href="index.html" class="btn btn-secondary">← Voltar</a><button class="btn btn-primary" type="button" id="start">Continuar avaliação →</button></div>
+</section>
+<section class="step" id="step2" aria-label="Perguntas de segurança">
+<div class="micro" style="color:#078ab7">Etapa 02 / 03</div><h2>Como sua operação se protege hoje?</h2>
+<p class="form-intro">Responda com base na realidade atual. Não existe resposta certa ou errada.</p>
+<div class="progress-head"><span>Seu progresso</span><strong id="progressLabel">0 de 8 perguntas</strong></div><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+<div id="questions"></div><div id="validationMsg" class="warning" role="alert" aria-live="polite"></div>
+<div class="step-actions"><button type="button" class="btn btn-secondary" id="backTo1">← Anterior</button><button type="button" class="btn btn-primary" id="calculate">Ver meu resultado →</button></div>
+</section>
+</form>
+<section class="step" id="step3" aria-label="Resultado da avaliação">
+<div class="result-card" id="resultCard" aria-live="polite">
+<div class="micro" style="color:#70dff4">Etapa 03 / 03</div><h2>Seu panorama inicial</h2><p class="subtitle">Indicador de maturidade declarada em segurança digital</p>
+<div class="score-hero"><div class="score-circle"><strong id="score">—</strong><span>de 5 pontos</span></div><div><div class="accent" id="level">—</div><p class="subtitle" id="summary" style="margin:6px 0 0">—</p></div></div>
+<div style="border-top:1px solid #92d7ef4d;padding-top:17px"><strong style="font-size:14px">Prioridades para sua empresa</strong><ul id="tips"></ul></div>
+<p class="disclaimer">Resultado baseado exclusivamente nas respostas fornecidas. Não é auditoria, laudo, certificação nem garantia de proteção. A ID3 TECH pode aprofundar a avaliação com escopo e proposta adequados ao porte da empresa.</p>
+<label class="consent"><input type="checkbox" id="sendConsent"><span>Autorizo o compartilhamento dos dados que preenchi e da minha pontuação com a ID3 TECH exclusivamente para solicitar contato e conversar sobre próximos passos. O envio só ocorrerá quando eu clicar em WhatsApp ou e-mail.</span></label>
+<div id="consentMsg" class="warning" role="alert" aria-live="polite"></div>
+<div class="report-actions"><button type="button" class="btn btn-primary" id="sendWhatsapp">Solicitar conversa no WhatsApp ↗</button><button type="button" class="btn btn-light" id="sendEmail">Enviar por e-mail ↗</button><button type="button" class="btn btn-outline" id="copyReport">Copiar avaliação</button></div>
+</div>
+<div class="step-actions"><button class="btn btn-secondary" type="button" id="backTo2">← Revisar respostas</button><a href="index.html" class="btn btn-secondary">Central de links</a></div>
+</section>
+<p class="contact-footer">Dúvidas? <a href="mailto:contato@id3.tech">contato@id3.tech</a> · WhatsApp <a href="https://wa.me/5511982457213" target="_blank" rel="noopener">(11) 98245-7213</a> · <a href="https://www.linkedin.com/company/id3-tech/" target="_blank" rel="noopener">LinkedIn</a></p>
+</div>
+</main><footer class="site-footer">© 2026 ID3 TECH · Tecnologia conectada aos resultados do seu negócio.</footer>
+<script src="assets/assessment.js" defer></script>
+</body></html>
